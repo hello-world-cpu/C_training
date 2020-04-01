@@ -1,27 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define filename1 "input.txt"	//write 4 words and one integer with a space or a newline between
-#define filename2 "output.txt"
+//write 4 words and one integer with a space or a newline between in a file text.txt (pass that file in argument in the command line)
+//prints "Done" on a newline at the end of the input file
+#define out_filename "backwards.txt"
 
 int main(int argc, char const *argv[])
 {
 	FILE *f_in, *f_out;
-	//read from a file (4 strings and one integer):
+	//read 4 words and one integer from the file in argv[1]:
 	char str1[40], str2[40], str3[40], str4[40];
 	int a;
 
-	f_in=fopen(filename1, "r");
+	f_in=fopen(argv[1], "r+");
 	fscanf(f_in, "%s %s %s %s %d", str1, str2, str3, str4, &a);
-	printf("%s\n", str1);
-	printf("%s\n", str2);
-	printf("%s\n", str3);
-	printf("%s\n", str4);
-	printf("%d\n", a);
-
+	fprintf(f_in, "\nDone");
+	printf("%s\n%s\n%s\n%s\n%d\n", str1, str2, str3, str4, a);
 	fclose(f_in);
 
-	//write to a file:
-	f_out=fopen(filename2, "w");
+	//write backwards to a file named backwards.txt:
+	f_out=fopen(out_filename, "w");
 	fprintf(f_out, "%d\n%s\n%s\n%s\n%s\n", a, str4, str3, str2, str1);
 
 	fclose(f_out);

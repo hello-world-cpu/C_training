@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
+#include <unistd.h>		//for the use of the sleep function
 #include <pthread.h>
 
 //a normal C function that is executed as a thread 

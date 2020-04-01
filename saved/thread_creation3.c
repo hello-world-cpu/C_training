@@ -1,7 +1,6 @@
-#include <stdio.h> 
-#include <stdlib.h> 
-#include <unistd.h> 
-#include <pthread.h> 
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
 
 // Let us create a global variable to change it in threads 
 int g = 0; 
