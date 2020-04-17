@@ -25,7 +25,7 @@ int binary_operator(int a, int b, int (*f)(int , int))
 int main(int argc, char **argv)
 {
 	int a, b;
-printf("argc = %d\n", argc);
+
 	if(argc!=4)
 	{
 		fprintf(stderr, "Wrong number of arguments\n");

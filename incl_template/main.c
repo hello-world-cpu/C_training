@@ -6,9 +6,9 @@ int main(int argc, char **argv)
 {
 	int a, b, c;
 
-	printf("Saisir 1er nombre:\n");
+	printf("Enter 1st number:\n");
 	scanf("%d", &b);
-	printf("Saisir 2eme nombre:\n");
+	printf("Enter 2nd number:\n");
 	scanf("%d", &c);
 	a=mult(b, c);
 	printf("b*c=%d\n", a);

@@ -1,4 +1,4 @@
-#include "function.h"
+//#include "function.h"
 
 int mult(int a, int b)
 {
